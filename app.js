@@ -3,8 +3,12 @@ window.addEventListener('load', () => {
     const form = document.getElementById('new-task-form');
     const input = document.getElementById('new-task-input');
     const tasks = document.querySelector('.tasks');
+    const month = document.getElementById('month');
+    const today = new Date();
+    console.log('date',today);
+    
 
-    // console.log(form, input, task);
+    month.innerText = `${today.toLocaleString('en', {month: 'long'})} ${today.getFullYear()}`;
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
